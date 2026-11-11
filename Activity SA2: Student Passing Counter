@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int score;
+    int passCount = 0;
+    int failCount = 0;
+    int count = 1;
+
+    while (count <= 10) {
+        cout << "Student " << count << " grade: ";
+        cin >> score;
+
+        if (score >= 75) {
+            cout << "Result: PASSED" << endl;
+            passCount = passCount + 1;
+        } else {
+            cout << "Result: FAILED" << endl;
+            failCount = failCount + 1;
+        }
+
+        count++;
+    }
+
+    cout << "\n===== FINAL SUMMARY =====" << endl;
+    cout << "Number of Passed Students: " << passCount << endl;
+    cout << "Number of Failed Students: " << failCount << endl;
+
+    return 0;
+}
